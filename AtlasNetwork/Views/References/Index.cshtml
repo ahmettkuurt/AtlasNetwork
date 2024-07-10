@@ -1,0 +1,39 @@
+﻿@using EntityLayer.Concrete
+@model List<References>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/ReferencesLayout.cshtml";
+}
+
+
+
+
+<div class="container-fluid services py-5 my-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+            <h5 class="text-primary">Referanslar</h5>
+            <h1>Anlaşma İçerisinde Olduğumuz Firmalar</h1>
+        </div>
+        <div class="row g-5 services-inner">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                    <div class="services-item bg-light">
+                        <div class="p-4 text-center services-content">
+                            <div class="services-content-icon">
+                                <img src="@item.ReferencesImage" style="padding:10px;width:80%" />
+                                <h4 class="mb-3">@item.ReferencesTitle</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

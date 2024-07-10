@@ -1,0 +1,43 @@
+﻿@using EntityLayer.Concrete
+@model List<MainPage>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/IndexLayout.cshtml";
+}
+
+
+<!-- Fact Start -->
+<div class="container-fluid bg-secondary py-5">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-3 wow fadeIn" data-wow-delay=".1s">
+                    <div class="d-flex counter">
+                        <h1 class="me-3 text-primary counter-value">@item.factshostingsales</h1>
+                        <h5 class="text-white mt-1">Hosting Satışı</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 wow fadeIn" data-wow-delay=".3s">
+                    <div class="d-flex counter">
+                        <h1 class="me-3 text-primary counter-value">@item.factsdomainregistered</h1>
+                        <h5 class="text-white mt-1">Alan Adı Tescili</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 wow fadeIn" data-wow-delay=".5s">
+                    <div class="d-flex counter">
+                        <h1 class="me-3 text-primary counter-value">@item.factsresolvedsupport</h1>
+                        <h5 class="text-white mt-1">Çözümlenen Destek</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 wow fadeIn" data-wow-delay=".7s">
+                    <div class="d-flex counter">
+                        <h1 class="me-3 text-primary counter-value">@item.factshappycustomer</h1>
+                        <h5 class="text-white mt-1">Mutlu Müşteri</h5>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!-- Fact End -->
